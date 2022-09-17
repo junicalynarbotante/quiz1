@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnMotivational.setOnClickListener(this)
         binding.btnFavorite.setOnClickListener(this)
 
-        val pquotes = PoolQuote.getPQuote()
+        var pquotes = PoolQuote.getPQuote()
         binding.tvRand.text = pquotes
 
     }

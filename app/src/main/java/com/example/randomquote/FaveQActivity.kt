@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.randomquote.databinding.ActivityMainBinding
 import com.example.randomquote.databinding.FavquoteBinding
 
 class FaveQActivity : AppCompatActivity(), View.OnClickListener{
@@ -23,10 +24,10 @@ class FaveQActivity : AppCompatActivity(), View.OnClickListener{
     }
 
     override fun onClick(p0: View?) {
-        val editor = sharedPreferences.edit().clear()
+
         when(p0!!.id){
             (R.id.btn_del)    ->{
-                editor.apply()
+                sharedPreferences.edit().clear().apply()
                 Toast.makeText(this, "QUOTE DELETED", Toast.LENGTH_SHORT).show()
                 finish()
             }
